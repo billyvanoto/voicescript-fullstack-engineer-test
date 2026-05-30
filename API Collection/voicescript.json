@@ -1,0 +1,1227 @@
+{
+  "info": {
+    "name": "voicescript",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Case",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Case No 3\",\n  \"duration\": 80,\n  \"location\": \"bandung\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "example success",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Case No 2\",\n  \"duration\": 90,\n  \"location\": \"remote\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "49",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"31-1u7FPdjNNB6YSNXrejSliqR3+kE\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 28 May 2026 07:59:45 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Succesfully created new case\",\n  \"id\": 4\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Available Case Reporter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case/available/reporter?reporter_location=bandung",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case",
+            "available",
+            "reporter"
+          ],
+          "query": [
+            {
+              "key": "reporter_location",
+              "value": "bandung"
+            }
+          ],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case/available/reporter?reporter_location=bandung",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case",
+                "available",
+                "reporter"
+              ],
+              "query": [
+                {
+                  "key": "reporter_location",
+                  "value": "bandung"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "vary",
+              "value": "Origin",
+              "name": "vary",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "79",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4f-A1xJGtVudMExhZkY7qdd4WEzmac\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 30 May 2026 06:46:59 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 6,\n    \"name\": \"Case no 4\",\n    \"duration\": 70,\n    \"location\": \"bandung\",\n    \"status\": \"new\"\n  }\n]",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Available Case Editor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case/available/editor",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case",
+            "available",
+            "editor"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case/available/editor",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case",
+                "available",
+                "editor"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "vary",
+              "value": "Origin",
+              "name": "vary",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "2",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 30 May 2026 06:48:30 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[]",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Assign Case Reporter",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case/assign/reporter",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case",
+            "assign",
+            "reporter"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"caseId\": 4,\n  \"reporterId\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case/assign/reporter",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case",
+                "assign",
+                "reporter"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"caseId\": 4,\n  \"reporterId\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "37",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"25-oxHnBn22uD6hs0+PMGLGJUEkUhU\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:33:54 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Succesfully assign case\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Assign Case Editor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case/assign/editor",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case",
+            "assign",
+            "editor"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"caseId\": 3,\n  \"editorId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case/assign/editor",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case",
+                "assign",
+                "editor"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"caseId\": 3,\n  \"editorId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "37",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"25-oxHnBn22uD6hs0+PMGLGJUEkUhU\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:45:56 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Succesfully assign case\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Manage Case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case?page=1&pagesize=20",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pagesize",
+              "value": "20"
+            }
+          ],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case?page=1&pagesize=20",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pagesize",
+                  "value": "20"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "147",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"93-C3YBgDktbErG4SbysKGlnpOQrQQ\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:37:04 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 5,\n    \"name\": \"Case No 3\",\n    \"location\": \"bandung\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Case No 2\",\n    \"location\": \"remote\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Case No 1\",\n    \"location\": \"jakarta\"\n  }\n]",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Manage Reporter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/reporter?page=1&pagesize=20",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "reporter"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pagesize",
+              "value": "20"
+            }
+          ],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/reporter?page=1&pagesize=20",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reporter"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pagesize",
+                  "value": "20"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "126",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"7e-NXYrLsCGkGZpdUXE7oPjHL+ZThM\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:39:40 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 2,\n    \"name\": \"Doe\",\n    \"location\": \"bandung\",\n    \"assignedCase\": \"1\"\n  },\n  {\n    \"id\": 1,\n    \"name\": \"John\",\n    \"location\": \"jakarta\",\n    \"assignedCase\": \"1\"\n  }\n]",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Manage Editor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/editor?page=1&pagesize=20",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "editor"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pagesize",
+              "value": "20"
+            }
+          ],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/editor",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "editor"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "131",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"83-0mvIc41YjqK0K1OCloX8ziAd/zY\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:41:00 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 3,\n    \"name\": \"michael\",\n    \"assignedCase\": \"0\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"alan\",\n    \"assignedCase\": \"0\"\n  },\n  {\n    \"id\": 1,\n    \"name\": \"smith\",\n    \"assignedCase\": \"0\"\n  }\n]",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Manage Assigned Case",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/assignedcase?page=1&pagesize=20",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "assignedcase"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pagesize",
+              "value": "20"
+            }
+          ],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/assignedcase?page=1&pagesize=20",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "assignedcase"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pagesize",
+                  "value": "20"
+                }
+              ],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "395",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"18b-A648Q7pYABbFfweLS2bxM9Sdl4o\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:44:37 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"assignmentId\": 3,\n    \"case\": {\n      \"id\": 4,\n      \"name\": \"Case No 2\",\n      \"duration\": 90,\n      \"location\": \"remote\",\n      \"status\": \"assigned\"\n    },\n    \"reporter\": {\n      \"id\": 2,\n      \"name\": \"Doe\"\n    },\n    \"editor\": {},\n    \"reporterFee\": \"180000.00\",\n    \"editorFee\": null\n  },\n  {\n    \"assignmentId\": 2,\n    \"case\": {\n      \"id\": 3,\n      \"name\": \"Case No 1\",\n      \"duration\": 60,\n      \"location\": \"jakarta\",\n      \"status\": \"assigned\"\n    },\n    \"reporter\": {\n      \"id\": 1,\n      \"name\": \"John\"\n    },\n    \"editor\": {},\n    \"reporterFee\": \"120000.00\",\n    \"editorFee\": null\n  }\n]",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Update Case Status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/case/status",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "case",
+            "status"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"caseId\": 6,\n  \"status\": \"assigned\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "example",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/case/status",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "case",
+                "status"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"caseId\": 3,\n  \"status\": \"assigned\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express",
+              "name": "x-powered-by",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-length",
+              "value": "44",
+              "name": "content-length",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2c-Jx2KZl/xSxvESuhxYKMEE/4/U/U\"",
+              "name": "etag",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 29 May 2026 06:57:25 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Succesfully update case status\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
